@@ -1,4 +1,7 @@
+//Управление корзиной
+
 const cartWrapper = document.querySelector('.cart-wrapper');
+var cartItemsArray = [];
 
 //Отслеживаем клик на странице
 window.addEventListener('click',function(event){
@@ -15,8 +18,13 @@ window.addEventListener('click',function(event){
             price: card.querySelector('.price__currency').innerText,
             counter: card.querySelector('[data-counter]').innerText,
         };
+        
+        
 
         console.log("productInfo:",productInfo);
+
+
+
 
         //Проверяем, есть ли уже такой товар в корзине
         const itemInCart = cartWrapper.querySelector(`[data-id="${productInfo.id}"]`); //шаблонная строка в обратных кавычках
@@ -61,6 +69,12 @@ window.addEventListener('click',function(event){
     
             //Отобразим товары в корзине
             cartWrapper.insertAdjacentHTML('beforeend', cartItemHTML);
+
+            cartItemsArray.push(productInfo);
+            console.log('cartItemsArray=',cartItemsArray);
+            console.log('cartItemsArray[0].title=',cartItemsArray[0].title);
+
+            var testGlobalVariable = "testGlobalVariable";
         }
 
         card.querySelector('[data-counter]').innerText = '1';  //Сбрасываем счётчик в 0 после добавления в корзину

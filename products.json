@@ -1,26 +1,39 @@
+{"items":
 [
 	{
 		"id": 1,
 		"title": "КПТ8 20г, паста теплопроводящая",
 		"itemsInBox": "20 грамм.",
-		"price": 260
+		"price": 260,
+		"imgSrc": "kpt8-20g.jpg"
 	},
 	{
 		"id": 2,
 		"title": "КПТ8 250г, паста теплопроводящая",
 		"itemsInBox": "250 грамм.",
-		"price": 750
+		"price": 750,
+		"imgSrc": "kpt8-250g.jpg"
 	},
 	{
 		"id": 3,
 		"title": "Графол ХТ-250, графитовая прокладка",
 		"itemsInBox": "25,4х25,4мм",
-		"price": 50
+		"price": 50,
+		"imgSrc": "Grafol-XT250.png"
 	},
 	{
 		"id": 4,
 		"title": "Графол ХТ-550, графитовая прокладка",
 		"itemsInBox": "25,4х25,4мм",
-		"price": 320
+		"price": 70,
+		"imgSrc": "Grafol-XT550.png"
+	},
+	{
+		"id": 5,
+		"title": "Инфол-370, индиевая прокладка",
+		"itemsInBox": "25,4х25,4мм",
+		"price": 320,
+		"imgSrc": "Infol-370.png"
 	}
 ]
+}

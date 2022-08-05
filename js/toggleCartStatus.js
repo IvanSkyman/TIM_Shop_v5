@@ -1,3 +1,5 @@
+//Меняем надпись в корзине в зависимости от того, есть там товар или нет
+
 function toggleCartStatus(){
 
     //console.log("toggleCartStatus=",toggleCartStatus);

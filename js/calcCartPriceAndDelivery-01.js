@@ -1,3 +1,6 @@
+
+//Функция подсчёта общей стоимости товаров в корзине и стоимости с учётом доставки
+//Доставка бесплатная при стоимости товаров свыше 600р
 function calcCartPriceAndDelivery() {
     
     const cartItems = document.querySelectorAll('.cart-item');
@@ -15,15 +18,16 @@ function calcCartPriceAndDelivery() {
     //Находим элемент, соответствующий блоку доставки в корзине
     const cartDelivery = document.querySelector('[data-cart-delivery]');
 
-    let totalPrice = 0;
+    let totalPrice = 0;  //Общая стоимость заказа (включая доставку)
 
-    cartItems.forEach(function (item){
+    cartItems.forEach(function (item){ //перебираем все товары в корзине
         console.log("item=",item);
         const amountEl = item.querySelector('[data-counter]');
         const priceEl = item.querySelector('.price__currency');
         console.log("amountEl=",amountEl);
         console.log("priceEl=",priceEl);
-        const currentPrice = parseInt(amountEl.innerText)*parseInt(priceEl.innerText);
+        const currentPrice = parseInt(amountEl.innerText)*parseInt(priceEl.innerText); //стоимость текущего товара - 
+        //произведение количества на цену
         console.log("currentPrice=",currentPrice);
         totalPrice += currentPrice; //Здесь в totalPrice входит только стоимость товара
     })
